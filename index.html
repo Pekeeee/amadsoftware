@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>AMAD Software Solutions</title>
-  <meta name="description" content="Conquistamos con cada línea de código. Plataformas, APIs e integraciones de alto impacto."/>
+  <meta name="description" content="Plataformas, APIs, eCommerce y apps móviles con seguridad, rendimiento y soporte enterprise."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
+  <!-- Iconify para íconos del Tech Stack -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   <link rel="icon" href="assets/favicon.png">
 </head>
 <body>
@@ -22,6 +24,7 @@
       </a>
 
       <nav class="nav-links" aria-label="Principal">
+        <a href="#techstack" class="pill pill-ghost">Tech Stack</a>
         <a href="#contacto" class="pill pill-white">Contáctanos</a>
       </nav>
 
@@ -35,7 +38,6 @@
     <!-- HERO -->
     <section class="hero">
       <div class="aurora" aria-hidden="true">
-        <!-- Video opcional: si no existe, el fondo CSS queda perfecto -->
         <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
           <source src="assets/hero.mp4" type="video/mp4">
         </video>
@@ -43,49 +45,195 @@
 
       <div class="container hero-inner">
         <h1 class="headline animate-up">
-          Conquistamos con cada<br>
-          línea de <span class="highlight">código</span>
+          Código <span class="highlight">único</span> para soluciones <span class="highlight">únicas</span>
         </h1>
         <p class="sub animate-up delay-1">
-          Impulsados por IA, creamos código inteligente que transforma ideas en soluciones que conquistan.
+          Cada línea de código es una oportunidad para conquistar. Empresa 100% mexicana, especializada en desarrollo de software a la medida.
         </p>
 
         <div class="cta-row animate-up delay-2">
           <a class="pill pill-main" href="#contacto">Habla con un experto</a>
         </div>
 
-        <!-- KPIs (nuevo, sin tarjetas de vidrio) -->
-        <div class="kpis animate-up delay-3" id="kpis">
-          <div class="kpi">
-            <div class="num" data-target="42" data-prefix="+"></div>
-            <div class="lbl">proyectos puestos en<br>producción</div>
-          </div>
-          <div class="kpi">
-            <div class="num" data-target="400" data-prefix="+"></div>
-            <div class="lbl">personas trabajando en<br>LATAM</div>
-          </div>
-          <div class="kpi">
-            <div class="num" data-target="1" data-prefix="+" data-suffix="M"></div>
-            <div class="lbl">de usuarios activos en<br>plataformas</div>
-          </div>
-          <div class="kpi">
-            <div class="num" data-target="8" data-prefix="+"></div>
-            <div class="lbl">años de<br>experiencia</div>
-          </div>
+        <!-- KPIs en cinta -->
+        <div class="kpi-ribbon animate-up delay-3" id="kpis">
+          <ul class="kpi-list">
+            <li class="kpi-item">
+              <span class="kpi-num" data-target="57" data-prefix="+"></span>
+              <span class="kpi-label">proyectos realizados<br>exitosamente</span>
+            </li>
+            <li class="kpi-item">
+              <span class="kpi-num" data-target="270" data-prefix="+"></span>
+              <span class="kpi-label">clientes<br>satisfechos</span>
+            </li>
+            <li class="kpi-item">
+              <span class="kpi-num" data-target="842" data-prefix="+" data-suffix=" mil"></span>
+              <span class="kpi-label">horas de<br>programación</span>
+            </li>
+            <li class="kpi-item">
+              <span class="kpi-num" data-target="5" data-prefix="+"></span>
+              <span class="kpi-label">años de<br>experiencia</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- CONFÍAN EN NOSOTROS -->
-    <section class="trust">
+    <!-- MARCAS -->
+    <section class="trust brands">
       <div class="container">
         <h2 class="trust-title">Marcas que <span>confían</span> en nosotros</h2>
-        <div class="trust-logos">
-          <div class="logo ph">ALFA</div>
-          <div class="logo ph">BETA</div>
-          <div class="logo ph">GAMMA</div>
-          <div class="logo ph">DELTA</div>
-          <div class="logo ph">EPSILON</div>
+        <p class="trust-sub">Ellos ya eligieron la mejor opción para sus negocios.</p>
+
+        <ul class="brandwall">
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/amadtech.png" alt="AmadTech"></li>
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/casseg.png" alt="CASSEG Ingeniería"></li>
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/chaos.png" alt="Chaos MC"></li>
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/lavuelta.png" alt="La Vuelta RP"></li>
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/spartalaxion.png" alt="Sparta Laxion"></li>
+          <li class="brand-item"><img class="brand-logo" src="assets/clients/chopchop.png" alt="Chop-chop"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ¿Por qué AMAD SS? -->
+    <section class="why">
+      <div class="container">
+        <header class="why-head animate-up">
+          <span class="eyebrow">Ventajas</span>
+          <h2 class="why-title">
+            ¿Por qué elegir <span>AMAD Software Solutions?</span>
+          </h2>
+          <p class="why-sub">
+            Te acompañamos en todo el camino: entendemos tu idea, la convertimos en un
+            producto útil y la mantenemos funcionando sin complicaciones.
+          </p>
+        </header>
+
+        <ul class="why-grid">
+          <li class="why-card animate-up delay-1" data-tilt>
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8 8L4 12L8 16M16 8L20 12L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 4L10 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>De principio a fin</h3>
+            <p>Desde la idea hasta el lanzamiento. Nos encargamos de todo para que puedas enfocarte en tu negocio.</p>
+          </li>
+
+          <li class="why-card animate-up delay-2" data-tilt>
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 12l3-3 2 2 4-4 4 4-6 6-4-4-3 3-3-3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Aliado de confianza</h3>
+            <p>Cuidamos tu inversión y te proponemos lo que de verdad necesitas. Sin letras chiquitas ni sorpresas.</p>
+          </li>
+
+          <li class="why-card animate-up delay-3" data-tilt>
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v10M12 3l4 4M12 3l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 21c4-2 10-2 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Avanza rápido</h3>
+            <p>Te mostramos avances frecuentes para que veas resultados y ajustemos el rumbo contigo.</p>
+          </li>
+
+          <li class="why-card animate-up delay-4" data-tilt>
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l7 3v6a9 9 0 01-7 8 9 9 0 01-7-8V6l7-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Seguro y estable</h3>
+            <p>Tus sistemas y datos protegidos, con un equipo atento cuando lo necesites.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES (tarjetas) -->
+    <section class="solutions" id="soluciones">
+      <div class="container">
+        <h2 class="solutions-title">Nuestras <span>soluciones</span></h2>
+
+        <div class="sol-grid">
+          <!-- Card 1 -->
+          <article class="sol-card animate-up">
+            <div class="sol-media">
+              <img src="assets/solutions/La-tecnologia-del-futuro-5-avances-que-cambiaran-el-mundo-2000x1200-1.jpg" alt="Desarrollo web, sistemas, bots y APIs">
+            </div>
+            <div class="sol-body">
+              <h3>Desarrollo web, sistemas, bots y APIs</h3>
+              <p>
+                Sitios que venden y plataformas que operan tu negocio: landing pages,
+                e-commerce, portales (P2P, B2C, B2B, B2P), bots y <em>APIs</em> integradas con tus sistemas.
+              </p>
+              <div class="sol-tags">
+                <span>Landing</span><span>E-commerce</span><span>Portales</span><span>Bots</span><span>APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="sol-card animate-up delay-1">
+            <div class="sol-media">
+              <img src="assets/solutions/mapping-the-future-the-rise-of-3d-reconstruction-software-in-digital-transformation.webp" alt="Actualización y reconstrucción de software">
+            </div>
+            <div class="sol-body">
+              <h3>Actualización y reconstrucción de software</h3>
+              <p>
+                Modernizamos tus sistemas para que sean más rápidos, seguros y escalables:
+                refactorización, migraciones, limpieza de deuda técnica y rediseño UX/UI.
+              </p>
+              <div class="sol-tags">
+                <span>Refactor</span><span>Migraciones</span><span>Rendimiento</span><span>UX/UI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="sol-card animate-up delay-2">
+            <div class="sol-media">
+              <img src="assets/solutions/maintenance.webp" alt="Mantenimiento de software y servidores">
+            </div>
+            <div class="sol-body">
+              <h3>Mantenimiento de software y servidores</h3>
+              <p>
+                Soporte y monitoreo 24/7, copias de seguridad, actualizaciones, alta disponibilidad
+                y respuesta ante incidentes. SLA a la medida de tu operación.
+              </p>
+              <div class="sol-tags">
+                <span>Soporte 24/7</span><span>Monitoreo</span><span>Backups</span><span>DevOps</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK: Pirámide -->
+    <section class="techstack" id="techstack">
+      <div class="container">
+        <header class="ts-head">
+          <h2 class="ts-title">Tech <span>Stack</span></h2>
+          <p class="ts-sub">Conoce la tecnología que impulsa nuestras soluciones.</p>
+        </header>
+
+        <div class="pyr-viewport">
+          <div class="pyr-stage">
+            <!-- orden visual de arriba hacia abajo -->
+            <div class="pyr-row r1"></div>
+            <div class="pyr-row r3"></div>
+            <div class="pyr-row r5"></div>
+            <div class="pyr-row r7"></div>
+            <div class="pyr-row r9"></div>
+          </div>
         </div>
       </div>
     </section>

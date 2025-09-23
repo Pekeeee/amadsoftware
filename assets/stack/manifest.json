@@ -1,0 +1,278 @@
+{
+  "html5": {
+    "file": "html5.svg",
+    "label": "HTML5"
+  },
+  "css3": {
+    "file": "css3.svg",
+    "label": "CSS3"
+  },
+  "javascript": {
+    "file": "javascript.svg",
+    "label": "JS"
+  },
+  "typescript": {
+    "file": "typescript.svg",
+    "label": "TS"
+  },
+  "react": {
+    "file": "react.svg",
+    "label": "React"
+  },
+  "nextjs": {
+    "file": "nextjs.svg",
+    "label": "Next.js"
+  },
+  "vue": {
+    "file": "vue.svg",
+    "label": "Vue"
+  },
+  "angular": {
+    "file": "angular.svg",
+    "label": "Angular"
+  },
+  "svelte": {
+    "file": "svelte.svg",
+    "label": "Svelte"
+  },
+  "tailwind": {
+    "file": "tailwind.svg",
+    "label": "Tailwind"
+  },
+  "sass": {
+    "file": "sass.svg",
+    "label": "Sass"
+  },
+  "nodejs": {
+    "file": "nodejs.svg",
+    "label": "Node"
+  },
+  "express": {
+    "file": "express.svg",
+    "label": "Express"
+  },
+  "nestjs": {
+    "file": "nestjs.svg",
+    "label": "Nest"
+  },
+  "python": {
+    "file": "python.svg",
+    "label": "Python"
+  },
+  "django": {
+    "file": "django.svg",
+    "label": "Django"
+  },
+  "fastapi": {
+    "file": "fastapi.svg",
+    "label": "FastAPI"
+  },
+  "php": {
+    "file": "php.svg",
+    "label": "PHP"
+  },
+  "laravel": {
+    "file": "laravel.svg",
+    "label": "Laravel"
+  },
+  "java": {
+    "file": "java.svg",
+    "label": "Java"
+  },
+  "spring": {
+    "file": "spring.svg",
+    "label": "Spring"
+  },
+  "dotnet": {
+    "file": "dotnet.svg",
+    "label": ".NET"
+  },
+  "go": {
+    "file": "go.svg",
+    "label": "Go"
+  },
+  "stripe": {
+    "file": "stripe.svg",
+    "label": "Stripe"
+  },
+  "paypal": {
+    "file": "paypal.svg",
+    "label": "PayPal"
+  },
+  "mercadopago": {
+    "file": "mercadopago.svg",
+    "label": "Mercado\nPago"
+  },
+  "postgresql": {
+    "file": "postgresql.svg",
+    "label": "PostgreSQL"
+  },
+  "mysql": {
+    "file": "mysql.svg",
+    "label": "MySQL"
+  },
+  "mariadb": {
+    "file": "mariadb.svg",
+    "label": "MariaDB"
+  },
+  "sqlserver": {
+    "file": "sqlserver.svg",
+    "label": "SQL\nServer"
+  },
+  "oracle": {
+    "file": "oracle.svg",
+    "label": "Oracle"
+  },
+  "mongodb": {
+    "file": "mongodb.svg",
+    "label": "MongoDB"
+  },
+  "redis": {
+    "file": "redis.svg",
+    "label": "Redis"
+  },
+  "firebase": {
+    "file": "firebase.svg",
+    "label": "Firebase"
+  },
+  "supabase": {
+    "file": "supabase.svg",
+    "label": "Supabase"
+  },
+  "elasticsearch": {
+    "file": "elasticsearch.svg",
+    "label": "Elastic"
+  },
+  "reactnative": {
+    "file": "reactnative.svg",
+    "label": "React\nNative"
+  },
+  "flutter": {
+    "file": "flutter.svg",
+    "label": "Flutter"
+  },
+  "swift": {
+    "file": "swift.svg",
+    "label": "Swift"
+  },
+  "kotlin": {
+    "file": "kotlin.svg",
+    "label": "Kotlin"
+  },
+  "unity": {
+    "file": "unity.svg",
+    "label": "Unity"
+  },
+  "unreal": {
+    "file": "unreal.svg",
+    "label": "Unreal"
+  },
+  "docker": {
+    "file": "docker.svg",
+    "label": "Docker"
+  },
+  "kubernetes": {
+    "file": "kubernetes.svg",
+    "label": "K8s"
+  },
+  "nginx": {
+    "file": "nginx.svg",
+    "label": "Nginx"
+  },
+  "apache": {
+    "file": "apache.svg",
+    "label": "Apache"
+  },
+  "githubactions": {
+    "file": "githubactions.svg",
+    "label": "GH\nActions"
+  },
+  "gitlabci": {
+    "file": "gitlabci.svg",
+    "label": "GitLab\nCI"
+  },
+  "terraform": {
+    "file": "terraform.svg",
+    "label": "Terraform"
+  },
+  "rabbitmq": {
+    "file": "rabbitmq.svg",
+    "label": "RabbitMQ"
+  },
+  "kafka": {
+    "file": "kafka.svg",
+    "label": "Kafka"
+  },
+  "prometheus": {
+    "file": "prometheus.svg",
+    "label": "Prometheus"
+  },
+  "grafana": {
+    "file": "grafana.svg",
+    "label": "Grafana"
+  },
+  "sentry": {
+    "file": "sentry.svg",
+    "label": "Sentry"
+  },
+  "aws": {
+    "file": "aws.svg",
+    "label": "AWS"
+  },
+  "azure": {
+    "file": "azure.svg",
+    "label": "Azure"
+  },
+  "gcp": {
+    "file": "gcp.svg",
+    "label": "GCP"
+  },
+  "cloudflare": {
+    "file": "cloudflare.svg",
+    "label": "Cloud\nflare"
+  },
+  "vercel": {
+    "file": "vercel.svg",
+    "label": "Vercel"
+  },
+  "netlify": {
+    "file": "netlify.svg",
+    "label": "Netlify"
+  },
+  "shopify": {
+    "file": "shopify.svg",
+    "label": "Shopify"
+  },
+  "woocommerce": {
+    "file": "woocommerce.svg",
+    "label": "Woo\nCommerce"
+  },
+  "wordpress": {
+    "file": "wordpress.svg",
+    "label": "WordPress"
+  },
+  "figma": {
+    "file": "figma.svg",
+    "label": "Figma"
+  },
+  "adobexd": {
+    "file": "adobexd.svg",
+    "label": "Adobe\nXD"
+  },
+  "jest": {
+    "file": "jest.svg",
+    "label": "Jest"
+  },
+  "cypress": {
+    "file": "cypress.svg",
+    "label": "Cypress"
+  },
+  "ga4": {
+    "file": "ga4.svg",
+    "label": "GA4"
+  },
+  "git": {
+    "file": "git.svg",
+    "label": "Git"
+  }
+}
