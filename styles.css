@@ -219,3 +219,69 @@ body.loaded .animate-up{opacity:1;transform:none}
   .badge{ display:flex; align-items:center; justify-content:center; }
   .badge .icon-wrap{ display:flex; align-items:center; justify-content:center; }
 }
+/* ===== Tech Stack · Pirámide: centrado + responsive ===== */
+
+/* Viewport de la sección (por si algún padding del container te recorta) */
+.pyr-viewport{max-width:100%;overflow:hidden}
+
+/* Variables responsivas para tamaño y separación */
+.pyr-stage{ --badge:90px; --gap:18px; display:grid; gap:16px; place-items:center; }
+.pyr-row{ display:flex; justify-content:center; gap:var(--gap); }
+
+/* Círculo contenedor (badge) */
+.badge{
+  width:var(--badge);
+  height:var(--badge);
+  border-radius:50%;
+  position:relative;
+  display:grid;           /* centrado perfecto */
+  place-items:center;     /* …en X/Y */
+  overflow:visible;
+}
+
+/* Anillo decorativo (opcional, si ya lo tienes puedes omitir) */
+.badge::before{
+  content:"";
+  position:absolute; inset:-2px;
+  border-radius:inherit;
+  background:conic-gradient(var(--cyan),var(--blue),var(--violet),var(--cyan));
+  -webkit-mask:radial-gradient(circle calc(50% - 5px),#000 98%,transparent 100%);
+          mask:radial-gradient(circle calc(50% - 5px),#000 98%,transparent 100%);
+  opacity:.65;
+}
+
+/* Caja interna para que el ícono no “toque” el borde ópticamente */
+.badge .icon-wrap{
+  width:68%;
+  height:68%;
+  display:grid;
+  place-items:center;
+}
+
+/* Iconify host => que ocupe todo y se centre de verdad */
+.badge iconify-icon{
+  display:block !important;   /* sobreescribe inline-block del host */
+  inline-size:100%;
+  block-size:100%;
+  margin:0;
+  line-height:0;
+  vertical-align:middle;
+  transform:translateZ(0);    /* evita subpíxel al rotar/animar */
+}
+
+/* Fallback si algún browser no soporta place-items */
+@supports not (place-items: center){
+  .badge, .badge .icon-wrap{display:flex;align-items:center;justify-content:center}
+}
+
+/* —— Responsive: reduce tamaño de círculos y gaps para que quepa la fila de 9 —— */
+@media (max-width:1024px){
+  .pyr-stage{ --badge:76px; --gap:16px; }
+}
+@media (max-width:820px){
+  .pyr-stage{ --badge:64px; --gap:14px; }
+}
+@media (max-width:560px){
+  .pyr-stage{ --badge:44px; --gap:10px; }
+  .techstack{padding:48px 0}
+}
