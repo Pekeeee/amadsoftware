@@ -1,0 +1,133 @@
+/* ===== AMAD — Hero “aurora + video”, tipografía fina y animaciones ===== */
+:root{
+  --navy: #0b1d3a;
+  --ink: #e9efff;
+  --paper:#0d1a34;
+
+  /* Aurora */
+  --cyan:#20e3d6;
+  --blue:#38bdf8;
+  --violet:#8b5cf6;
+  --pink:#f472b6;
+
+  --muted: 203 213 225;
+
+  --radius: 999px;
+  --shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{display:block;max-width:100%;height:auto}
+body{
+  font-family:"Plus Jakarta Sans", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#0a1530;color:#fff;
+}
+
+/* ===== Utilidades ===== */
+.container{max-width:1200px;margin-inline:auto;padding:0 24px}
+.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:.85rem 1.2rem;font-weight:800;text-decoration:none;transition:.25s all;white-space:nowrap}
+.pill-main{background:linear-gradient(90deg,var(--cyan),var(--blue));color:#041427;box-shadow:0 10px 30px rgba(32,227,214,.35)}
+.pill-main:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(32,227,214,.45)}
+.pill-white{background:#fff;color:#07152f;font-weight:900;border:1px solid rgba(255,255,255,.2)}
+.pill-white:hover{filter:brightness(1.04)}
+.pill-ghost{background:#0f2b58;color:#e8efff;border:1px solid #1b3c7b}
+.pill-ghost:hover{filter:brightness(1.08)}
+.search-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#fff;margin-right:.5rem}
+
+/* ===== NAVBAR ===== */
+.site-nav{position:sticky;top:0;z-index:50;background:#081532;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:72px}
+.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.logo-img{height:28px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav-links{display:flex;align-items:center;gap:14px}
+.nav-link{color:#e9efff;text-decoration:none;font-weight:700;opacity:.9}
+.nav-link:hover{opacity:1}
+.nav-toggle{display:none;background:none;border:0}
+.nav-toggle span{display:block;width:24px;height:2px;background:#e9efff;margin:5px 0;border-radius:2px}
+
+/* ===== HERO ===== */
+.hero{position:relative;isolation:isolate;min-height:84vh;display:flex;align-items:center;background:#0a1530}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:980px}
+.headline{
+  font-family:"Sora", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:800;
+  font-size:clamp(2.2rem,5.2vw,4.6rem);
+  line-height:1.02;margin:0 0 14px;letter-spacing:.2px;
+}
+.highlight{
+  background:linear-gradient(90deg,var(--cyan),var(--blue));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sub{color:rgba(var(--muted)/.96);margin:0 auto 18px;max-width:740px;font-size:clamp(1rem,1.2vw,1.15rem)}
+.cta-row{display:flex;justify-content:center;gap:12px}
+
+/* MÉTRICAS */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.card.glass{
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;padding:18px 10px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.25)
+}
+.card strong{display:block;font-size:1.6rem}
+.card span{font-size:.95rem;color:rgba(var(--muted)/.9);line-height:1.35}
+
+/* AURORA + VIDEO */
+.aurora{position:absolute;inset:0;overflow:hidden}
+.bg-video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;mix-blend-mode:screen;pointer-events:none;
+}
+.a{position:absolute;width:60vw;height:60vw;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen;animation:drift 26s linear infinite}
+.a1{left:-10vw;top:-10vh;background:radial-gradient(closest-side, rgba(32,227,214,.9), transparent 60%)}
+.a2{right:-6vw;top:5vh;background:radial-gradient(closest-side, rgba(139,92,246,.9), transparent 60%);animation-duration:34s;animation-direction:reverse}
+.a3{left:30vw;bottom:-10vh;background:radial-gradient(closest-side, rgba(244,114,182,.85), transparent 60%);animation-duration:38s}
+.a4{right:20vw;bottom:-20vh;background:radial-gradient(closest-side, rgba(56,189,248,.9), transparent 60%);animation-duration:30s}
+.vignette{position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 30%, transparent 40%, rgba(2,6,23,.55) 70%, rgba(2,6,23,.85) 100%)}
+@keyframes drift{
+  0%   {transform:translate3d(0,0,0) scale(1)}
+  50%  {transform:translate3d(2vw,-3vh,0) scale(1.05)}
+  100% {transform:translate3d(0,0,0) scale(1)}
+}
+
+/* ===== TRUST ===== */
+.trust{background:#06142e;padding:48px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.trust-title{margin:0 0 16px;text-align:center;font:800 2rem "Sora",sans-serif}
+.trust-title span{background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.trust-logos{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.logo.ph{border:1px solid rgba(255,255,255,.12);background:#0b2046;color:#c9d8ff;letter-spacing:.4px;border-radius:12px;padding:.6rem .8rem;font-weight:800}
+
+/* ===== CONTACTO ===== */
+.contact{background:#071736;padding:72px 0}
+.contact h2{text-align:center;margin:0 0 18px;font:800 2rem "Sora",sans-serif}
+.contact-form{max-width:680px;margin:0 auto;background:#0a1f44;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.contact-form label{display:flex;flex-direction:column;font-weight:700;margin:.5rem 0}
+.contact-form input,.contact-form textarea{font:inherit;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#06142e;color:#e8efff;padding:12px 14px}
+.contact-form button{margin-top:6px}
+
+/* ===== FOOTER ===== */
+.site-footer{background:#051028;color:#a8b8e8;padding:20px 0;border-top:1px solid rgba(255,255,255,.06)}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fbrand .logo-img{height:24px}
+.copy{opacity:.9}
+
+/* ===== Animación de entrada ===== */
+.animate-up{opacity:0;transform:translateY(22px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
+.animate-up.delay-1{transition-delay:.08s}
+.animate-up.delay-2{transition-delay:.16s}
+.animate-up.delay-3{transition-delay:.24s}
+.animate-up.delay-4{transition-delay:.32s}
+.animate-up.delay-5{transition-delay:.40s}
+.animate-up.delay-6{transition-delay:.48s}
+body.loaded .animate-up{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .metrics{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 720px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .headline{font-size:clamp(2rem,8vw,3rem)}
+  .sub{font-size:1rem}
+  .metrics{grid-template-columns:1fr;gap:12px}
+}

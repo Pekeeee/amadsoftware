@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AMAD Software Solutions</title>
+  <meta name="description" content="Conquistamos con cada línea de código. Plataformas, APIs e integraciones de alto impacto."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Títulos elegantes + texto fino -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-nav">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="AMAD">
+        <img class="logo-img" src="assets/logo.png" alt="AMAD Software Solutions">
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#top" class="nav-link">Inicio</a>
+        <a href="#blog" class="pill pill-ghost"><span class="search-dot" aria-hidden="true"></span>Visita nuestro blog</a>
+        <a href="#contacto" class="pill pill-white">Contáctanos</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== HERO AURORA / VIDEO ===== -->
+    <section class="hero">
+      <div class="aurora" aria-hidden="true">
+        <!-- (Opcional) coloca un video en assets/hero.mp4 para un fondo vivo -->
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="assets/hero.mp4" type="video/mp4">
+        </video>
+        <!-- Gradientes animados como fallback/overlay -->
+        <div class="a a1"></div>
+        <div class="a a2"></div>
+        <div class="a a3"></div>
+        <div class="a a4"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <h1 class="headline animate-up">
+          Conquistamos con cada<br>
+          línea de <span class="highlight">código</span>
+        </h1>
+        <p class="sub animate-up delay-1">
+          Impulsados por IA, creamos código inteligente que transforma ideas en soluciones que conquistan.
+        </p>
+
+        <div class="cta-row animate-up delay-2">
+          <a class="pill pill-main" href="#contacto">Habla con un experto</a>
+        </div>
+
+        <!-- MÉTRICAS -->
+        <div class="metrics">
+          <div class="card glass animate-up delay-3">
+            <strong>+42</strong><span>proyectos puestos en<br>producción</span>
+          </div>
+          <div class="card glass animate-up delay-4">
+            <strong>+400</strong><span>personas trabajando en<br>LATAM</span>
+          </div>
+          <div class="card glass animate-up delay-5">
+            <strong>+1M</strong><span>de usuarios activos en<br>plataformas</span>
+          </div>
+          <div class="card glass animate-up delay-6">
+            <strong>+8</strong><span>años de<br>experiencia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONFÍAN EN NOSOTROS ===== -->
+    <section class="trust">
+      <div class="container">
+        <h2 class="trust-title">Marcas que <span>confían</span> en nosotros</h2>
+        <div class="trust-logos">
+          <div class="logo ph">ALFA</div>
+          <div class="logo ph">BETA</div>
+          <div class="logo ph">GAMMA</div>
+          <div class="logo ph">DELTA</div>
+          <div class="logo ph">EPSILON</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2>Hablemos</h2>
+        <form class="contact-form" id="contactForm">
+          <label>Nombre<input name="name" required placeholder="Tu nombre"/></label>
+          <label>Empresa<input name="company" placeholder="Opcional"/></label>
+          <label>Correo<input name="email" type="email" required placeholder="tucorreo@empresa.com"/></label>
+          <label>Mensaje<textarea name="message" rows="5" required placeholder="Cuéntanos tu proyecto..."></textarea></label>
+          <button class="pill pill-main" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="fbrand">
+          <img class="logo-img" src="assets/logo.png" alt="AMAD" />
+        </div>
+        <div class="copy">© <span id="year"></span> AMAD. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
