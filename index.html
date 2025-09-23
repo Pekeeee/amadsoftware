@@ -7,14 +7,14 @@
   <meta name="description" content="Conquistamos con cada línea de código. Plataformas, APIs e integraciones de alto impacto."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Títulos elegantes + texto fino -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" href="assets/favicon.png">
 </head>
 <body>
+  <noscript><style>.animate-up{opacity:1 !important;transform:none !important}</style></noscript>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <header class="site-nav">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="AMAD">
@@ -22,8 +22,6 @@
       </a>
 
       <nav class="nav-links" aria-label="Principal">
-        <a href="#top" class="nav-link">Inicio</a>
-        <a href="#blog" class="pill pill-ghost"><span class="search-dot" aria-hidden="true"></span>Visita nuestro blog</a>
         <a href="#contacto" class="pill pill-white">Contáctanos</a>
       </nav>
 
@@ -34,20 +32,13 @@
   </header>
 
   <main id="top">
-    <!-- ===== HERO AURORA / VIDEO ===== -->
+    <!-- HERO -->
     <section class="hero">
       <div class="aurora" aria-hidden="true">
-        <!-- (Opcional) coloca un video en assets/hero.mp4 para un fondo vivo -->
-       <video class="bg-video" autoplay muted loop playsinline>
-  <source src="https://www.pexels.com/download/video/28561594/" type="video/mp4">
-</video>
-
-        <!-- Gradientes animados como fallback/overlay -->
-        <div class="a a1"></div>
-        <div class="a a2"></div>
-        <div class="a a3"></div>
-        <div class="a a4"></div>
-        <div class="vignette"></div>
+        <!-- Video opcional: si no existe, el fondo CSS queda perfecto -->
+        <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+          <source src="assets/hero.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="container hero-inner">
@@ -63,25 +54,29 @@
           <a class="pill pill-main" href="#contacto">Habla con un experto</a>
         </div>
 
-        <!-- MÉTRICAS -->
-        <div class="metrics">
-          <div class="card glass animate-up delay-3">
-            <strong>+42</strong><span>proyectos puestos en<br>producción</span>
+        <!-- KPIs (nuevo, sin tarjetas de vidrio) -->
+        <div class="kpis animate-up delay-3" id="kpis">
+          <div class="kpi">
+            <div class="num" data-target="42" data-prefix="+"></div>
+            <div class="lbl">proyectos puestos en<br>producción</div>
           </div>
-          <div class="card glass animate-up delay-4">
-            <strong>+400</strong><span>personas trabajando en<br>LATAM</span>
+          <div class="kpi">
+            <div class="num" data-target="400" data-prefix="+"></div>
+            <div class="lbl">personas trabajando en<br>LATAM</div>
           </div>
-          <div class="card glass animate-up delay-5">
-            <strong>+1M</strong><span>de usuarios activos en<br>plataformas</span>
+          <div class="kpi">
+            <div class="num" data-target="1" data-prefix="+" data-suffix="M"></div>
+            <div class="lbl">de usuarios activos en<br>plataformas</div>
           </div>
-          <div class="card glass animate-up delay-6">
-            <strong>+8</strong><span>años de<br>experiencia</span>
+          <div class="kpi">
+            <div class="num" data-target="8" data-prefix="+"></div>
+            <div class="lbl">años de<br>experiencia</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONFÍAN EN NOSOTROS ===== -->
+    <!-- CONFÍAN EN NOSOTROS -->
     <section class="trust">
       <div class="container">
         <h2 class="trust-title">Marcas que <span>confían</span> en nosotros</h2>
@@ -95,7 +90,7 @@
       </div>
     </section>
 
-    <!-- ===== CONTACTO ===== -->
+    <!-- CONTACTO -->
     <section id="contacto" class="contact">
       <div class="container">
         <h2>Hablemos</h2>
@@ -112,7 +107,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="fbrand">
-          <img class="logo-img" src="assets/logo.png" alt="AMAD" />
+          <img class="logo-img" src="assets/logo.png" alt="AMAD">
         </div>
         <div class="copy">© <span id="year"></span> AMAD. Todos los derechos reservados.</div>
       </div>
