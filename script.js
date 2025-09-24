@@ -216,7 +216,7 @@
   if (el && el.tagName.toLowerCase() === 'details') el.setAttribute('open', '');
 })();
 
-// ===== Contacto Pro v2 + EmailJS =====
+// ===== Contacto Pro v2 + EmailJS (enviar objeto explícito) =====
 (() => {
   const form  = document.getElementById('contactFormPro');
   const toast = document.getElementById('cToast');
@@ -234,8 +234,8 @@
   };
 
   // País -> LADA
-  const country = form.querySelector('select[name="country"]');
-  const dial    = form.querySelector('input[name="dial"]');
+  const country = form.querySelector('[name="country"]');
+  const dial    = form.querySelector('[name="dial"]');
   if (country && dial) {
     const map = { MX:'+52', US:'+1', AR:'+54', CO:'+57', ES:'+34', CL:'+56', PE:'+51' };
     country.addEventListener('change', () => { dial.value = map[country.value] || '+'; });
@@ -245,7 +245,7 @@
   form.addEventListener('input', e => setInvalid(e.target, false));
 
   // autosize del textarea
-  const ta = form.querySelector('textarea[name="mensaje"]');
+  const ta = form.querySelector('[name="mensaje"]');
   if (ta){
     const autoresize = () => { ta.style.height='auto'; ta.style.height = ta.scrollHeight + 'px'; };
     ['input','change'].forEach(ev => ta.addEventListener(ev, autoresize));
@@ -269,10 +269,27 @@
 
     showToast('Enviando…');
 
-    try {
-      // EmailJS: usa sendForm para leer todos los fields del form
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+    // Recopilamos con los mismos NOMBRES que tu plantilla de EmailJS
+    const data = {
+      // Cabecera/aux
+      fecha: new Date().toLocaleString('es-MX', { dateStyle: 'medium', timeStyle: 'short' }),
+      pagina: window.location.href,
 
+      // Campos visibles (coinciden con tu plantilla)
+      nombre:    form.nombre.value.trim(),
+      apellidos: form.apellidos.value.trim(),
+      email:     form.email.value.trim(),
+      country:   form.country.value,
+      dial:      form.dial.value.trim(),
+      phone:     form.phone.value.trim(),
+      empresa:   form.empresa.value.trim(),
+      cargo:     (form.cargo.value || '').trim(),
+      servicio:  form.servicio.value,
+      mensaje:   form.mensaje.value.trim()
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data);
       showToast('¡Gracias! Te contactamos pronto.');
       form.reset();
       ta && (ta.style.height = 'auto');

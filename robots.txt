@@ -1,0 +1,12 @@
+# robots.txt — AMAD Software Solutions
+User-agent: *
+Allow: /
+
+# Bloqueos (ajústalos si un día agregas estas rutas)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /private/
+
+# Ubicación del sitemap
+Sitemap: https://amadsoftwaresolutions.com/sitemap.xml

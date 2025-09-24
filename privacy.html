@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Política de privacidad — AMAD Software Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter+Tight:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .policy{
+      min-height:100vh; background:#0a1530; color:#e9f2ff; padding:48px 0 80px;
+    }
+    .policy .container{max-width:900px}
+    .policy h1{font:700 clamp(1.8rem,3vw,2.4rem) "Space Grotesk","Inter Tight",sans-serif; margin:0 0 12px}
+    .policy p, .policy li{color:#cfe0ff; line-height:1.7}
+    .policy a{color:#9edcff}
+    .policy .card{
+      margin-top:16px; padding:18px; border-radius:14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 14px 36px rgba(0,0,0,.28);
+    }
+  </style>
+</head>
+<body>
+  <section class="policy">
+    <div class="container">
+      <h1>Política de privacidad</h1>
+      <p>En AMAD Software Solutions (“AMAD”, “nosotros”) respetamos tu privacidad. Esta política describe qué datos recopilamos, cómo los usamos y tus derechos.</p>
+
+      <div class="card">
+        <h2>Datos que podemos recopilar</h2>
+        <ul>
+          <li>Datos de contacto: nombre, apellidos, correo, teléfono, empresa y cargo.</li>
+          <li>Información de proyecto: servicio de interés y mensaje.</li>
+          <li>Datos técnicos mínimos de navegación (cookies estrictamente necesarias / analítica básica).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Finalidades</h2>
+        <ul>
+          <li>Responder a tus solicitudes y enviarte propuestas.</li>
+          <li>Prestación de servicios, soporte y comunicación comercial (si la consientes).</li>
+          <li>Mejora del sitio y seguridad.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Base legal</h2>
+        <p>Interés legítimo y/o tu consentimiento, según aplique.</p>
+      </div>
+
+      <div class="card">
+        <h2>Con quién compartimos tus datos</h2>
+        <p>Con proveedores tecnológicos necesarios (por ejemplo, hosting, envío de emails) bajo contratos de confidencialidad. No vendemos tus datos.</p>
+      </div>
+
+      <div class="card">
+        <h2>Plazo de conservación</h2>
+        <p>El necesario para las finalidades indicadas o lo exigido por ley.</p>
+      </div>
+
+      <div class="card">
+        <h2>Tus derechos</h2>
+        <p>Puedes solicitar acceso, rectificación, eliminación y limitación del tratamiento escribiendo a
+          <a href="mailto:amadsoftwaresolutions@gmail.com">amadsoftwaresolutions@gmail.com</a>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>AMAD Software Solutions · Irapuato, GTO · México<br/>
+           Email: <a href="mailto:amadsoftwaresolutions@gmail.com">amadsoftwaresolutions@gmail.com</a><br/>
+           WhatsApp: <a href="https://wa.me/524621269481" target="_blank" rel="noopener">+52 462 126 9481</a>
+        </p>
+      </div>
+
+      <p style="opacity:.8;margin-top:16px">Última actualización: <span id="year"></span></p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
